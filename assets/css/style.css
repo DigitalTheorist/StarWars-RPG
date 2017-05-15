@@ -1,0 +1,37 @@
+ body {
+  background-image: url("../images/backGrounds/2jedis.jpg");
+  background-size: 1280px;
+  background-repeat: no-repeat;
+ }
+
+ .navbar-default {
+   background: grey;
+   border-color: black;
+   height: 80px;
+}
+
+.characters-div {
+  height: 120px;
+  width: 200px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: aquamarine;
+}
+
+
+.character {
+  width: 100px;
+  height: 100px;
+  margin-left: 35px;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 990px) {
+
+  body {
+    background-size: 1565px;
+  }
+}
