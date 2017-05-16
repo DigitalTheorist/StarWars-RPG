@@ -23,19 +23,32 @@ var healthPoints = 0
 var attackPower = 0
 var counterAttackPower = 0
 
-var oppntHealthPoints = 0
-var oppntAttackPower = 0
-var oppntCounterAttackPower = 0
+var opponentHealthPoints = 0
 
-        //ATTACK BUTTON ATTACKING TWICE! - FIX!
+
+        //ATTACK BUTTON FUNCTION.
 //------------------------------------------
 $(".attackButton").on("click", function(){
-  healthPoints = healthPoints - oppntCounterAttackPower;
-  console.log("Healthpoints decreased by " + healthPoints);
-  oppntHealthPoints = oppntHealthPoints - attackPower;
-  console.log("opponent's health decreased by " + oppntHealthPoints);
+console.log("at attack click PHP = " + healthPoints);
+  console.log("at attack click PAP = " + attackPower);
+    console.log("at attack click OCAP = " + counterAttackPower);
+      console.log("at attack click OHP = " + opponentHealthPoints);
+
+  opponentHealthPoints -= attackPower;
+  console.log("Opponent's HP reduced to " + opponentHealthPoints);
+
+  healthPoints -= counterAttackPower;
+  console.log("Player's HP reduced to " + healthPoints);
+
   attackPower += attackPower;
-  console.log("attack power increased by " + attackPower);
+  console.log("player AP increased to " + attackPower);
+
+  if (healthPoints <= 0) {
+    console.log("player loses")
+
+  } else if (opponentHealthPoints <= 0) {
+    console.log ("you've defeated your oppenent")
+  }
 });
 
 //------------------------------------------
@@ -47,13 +60,19 @@ $(".cha1").on("click", function(){
     characterSwitch = false;
 
     healthPoints = 50;
-    attackPower = 20;
+    attackPower = 10;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
     } else if (characterSwitch === false) {
       $("#akbar").appendTo(".opponentArena");
 
       opponentHealthPoints = 50;
-      CounterAttackPow = 30;
+      counterAttackPower = 10;
+      console.log("the opponent's healthPoints are " + opponentHealthPoints)
+      console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
+
     }
 });
 //------------------------------------------
@@ -63,16 +82,19 @@ $(".cha2").on("click", function(){
     $("#bobafett").appendTo(".playerArena");
     characterSwitch = false;
 
-    healthPoints = 80;
-    attackPower = 30;
-    counterAttackPower = 20;
+    healthPoints = 60;
+    attackPower = 15;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
   } else if (characterSwitch === false) {
       $("#bobafett").appendTo(".opponentArena");
 
-      oppntHealthPoints = 80;
-      oppntAttackPower = 30;
-      oppntCounterAttackPow = 20;
+      opponentHealthPoints = 60;
+      counterAttackPower = 15;
+      console.log("the opponent's healthPoints are " + opponentHealthPoints)
+      console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
     }
 });
 //------------------------------------------
@@ -81,16 +103,19 @@ $(".cha3").on("click", function(){
     $("#chewbacca").appendTo(".playerArena");
     characterSwitch = false;
 
-    healthPoints = 80;
-    attackPower = 30;
-    counterAttackPower = 20;
+    healthPoints = 70;
+    attackPower = 20;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
   } else if (characterSwitch === false) {
       $("#chewbacca").appendTo(".opponentArena");
 
-      oppntHealthPoints = 80;
-      oppntAttackPower = 30;
-      oppntCounterAttackPow = 20;
+      opponentHealthPoints = 70;
+      counterAttackPower = 20;
+      console.log("the opponent's healthPoints are " + opponentHealthPoints)
+      console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
     }
 });
 //------------------------------------------
@@ -100,15 +125,18 @@ $(".cha4").on("click", function(){
     characterSwitch = false;
 
     healthPoints = 60;
-    attackPower = 40;
-    counterAttackPower = 40;
+    attackPower = 25;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
   } else if (characterSwitch === false) {
       $("#darthmaul").appendTo(".opponentArena");
 
-      oppntHealthPoints = 60;
-      oppntAttackPower = 40;
-      oppntCounterAttackPow = 40;
+      opponentHealthPoints = 60;
+      counterAttackPower = 25;
+      console.log("the opponent's healthPoints are " + opponentHealthPoints)
+      console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
     }
 });
 //------------------------------------------
@@ -117,16 +145,19 @@ $(".cha5").on("click", function(){
     $("#quigonjinn").appendTo(".playerArena");
     characterSwitch = false;
 
-    healthPoints = 60;
-    attackPower = 40;
-    counterAttackPower = 40;
+    healthPoints = 90;
+    attackPower = 30;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
   } else if (characterSwitch === false) {
     $("#quigonjinn").appendTo(".opponentArena");
 
-    oppntHealthPoints = 60;
-    oppntAttackPower = 40;
-    oppntCounterAttackPow = 40;
+    opponentHealthPoints = 90;
+    counterAttackPower = 30;
+    console.log("the opponent's healthPoints are " + opponentHealthPoints)
+    console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
   }
 });
 //------------------------------------------
@@ -135,16 +166,19 @@ $(".cha6").on("click", function(){
     $("#jabba").appendTo(".playerArena");
     characterSwitch = false;
 
-    healthPoints = 100;
-    attackPower = 20;
-    counterAttackPower = 10;
+    healthPoints = 200;
+    attackPower = 15;
+    console.log("The player's healthPoints are " + healthPoints);
+    console.log("The player's attackPower is " + attackPower);
 
   } else if (characterSwitch === false) {
     $("#jabba").appendTo(".opponentArena");
 
-    oppntHealthPoints = 100;
-    oppntAttackPower = 20;
-    oppntCounterAttackPow = 10;
+    opponentHealthPoints = 200;
+    counterAttackPower = 15;
+    console.log("the opponent's healthPoints are " + opponentHealthPoints)
+    console.log("The opponent's counterAttackPower is " + counterAttackPower)
+
   }
 });
 //------------------------------------------
