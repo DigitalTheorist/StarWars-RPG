@@ -11,7 +11,7 @@
 }
 
 .characters-div {
-  height: 120px;
+  height: 206px;
   width: 200px;
   margin-left: 10px;
   margin-top: 10px;
@@ -21,6 +21,10 @@
   border-color: aquamarine;
 }
 
+.logo {
+  position: relative;
+  bottom: 42px;
+}
 
 .character {
   width: 100px;
@@ -29,6 +33,64 @@
   margin-top: 8px;
 }
 
+.playerArena {
+  height: 120px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 3px;
+  border-color: aquamarine:
+}
+
+.playerArenaStats {
+height: 120px;
+width: 200px;
+margin-top: 20px;
+margin-left: 102px;
+background-color: lightblue;
+border-radius: 10px;
+border-color: aquamarine;
+border-style: solid;
+border-width: 3px;
+border-color: aquamarine:
+}
+
+.attackButton {
+  margin-top: 28px;
+  margin-left: 26px;
+}
+
+.opponentArena {
+  height: 120px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 3px;
+  border-color: aquamarine:
+}
+
+.opponentArenaStats {
+  height: 120px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 3px;
+  border-color: aquamarine:
+}
+
+/*MEDIA SCREEN BEGINS*/
 @media screen and (max-width: 990px) {
 
   body {
